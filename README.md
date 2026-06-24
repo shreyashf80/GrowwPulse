@@ -1,0 +1,85 @@
+# Groww Review Pulse
+
+Automated weekly **"pulse"** that turns public Google Play Store reviews for **Groww** into a one-page insight report, delivered to stakeholders via Google Workspace using MCP (Model Context Protocol).
+
+## Quick Start
+
+### Prerequisites
+
+- Python ≥ 3.11
+- `pip` (or `uv`)
+
+### Installation
+
+```bash
+# Clone the repo
+git clone <repo-url>
+cd Groww_Pulse
+
+# Install in editable mode with dev dependencies
+pip install -e ".[dev]"
+```
+
+### Usage
+
+```bash
+# Show help
+python -m groww_pulse run --help
+
+# Run for the current week (dry-run — no delivery)
+python -m groww_pulse run --dry-run
+
+# Run for a specific ISO week
+python -m groww_pulse run --week 2026-W24
+
+# Draft-only (create Gmail draft but don't send)
+python -m groww_pulse run --week 2026-W24 --draft-only
+
+# Custom review window (8 weeks instead of default 12)
+python -m groww_pulse run --window 8
+```
+
+### Configuration
+
+Edit `config.yaml` at the project root. See `docs/architecture.md` §8 for the full schema.
+
+Key fields to set before first real run:
+- `delivery.google_doc_id` — ID of the target Google Doc
+- `delivery.email_recipients` — list of stakeholder email addresses
+
+### Running Tests
+
+```bash
+pytest tests/ -v
+```
+
+## Project Structure
+
+```
+Groww_Pulse/
+├── docs/                    # Problem statement, architecture, implementation plan
+├── mcp_servers/             # In-repo MCP servers
+│   └── playstore_reviews/   # Google Play review scraper (MCP server)
+├── groww_pulse/             # Main application package
+│   ├── __main__.py          # CLI entrypoint
+│   ├── config.py            # Config loader
+│   ├── ingestion.py         # Review fetching + PII scrubbing
+│   ├── clustering.py        # UMAP + HDBSCAN pipeline
+│   ├── summarizer.py        # LLM theme extraction
+│   ├── renderer.py          # Report rendering (Docs + email)
+│   ├── delivery.py          # MCP-based delivery
+│   ├── receipts.py          # Run receipt persistence
+│   └── pii.py               # PII scrubbing utilities
+├── tests/                   # Test suite
+├── data/receipts/           # Run receipt JSON files
+├── config.yaml              # Runtime configuration
+├── mcp_servers.json         # MCP server declarations
+└── pyproject.toml           # Python project metadata
+```
+
+## Documentation
+
+- [Problem Statement](docs/problemStatement.md)
+- [Architecture](docs/architecture.md)
+- [Implementation Plan](docs/implementation-plan.md)
+- [Edge Cases](docs/edge-cases.md)

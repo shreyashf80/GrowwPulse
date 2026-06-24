@@ -1,0 +1,32 @@
+{
+  "mcpServers": {
+    "playstore-reviews": {
+      "command": "python",
+      "args": [
+        "-m",
+        "mcp_servers.playstore_reviews"
+      ],
+      "env": {}
+    },
+    "google-docs": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@anthropic/google-docs-mcp"
+      ],
+      "env": {
+        "GOOGLE_CREDENTIALS_PATH": "/path/to/credentials.json"
+      }
+    },
+    "gmail": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@anthropic/gmail-mcp"
+      ],
+      "env": {
+        "GOOGLE_CREDENTIALS_PATH": "/path/to/credentials.json"
+      }
+    }
+  }
+}

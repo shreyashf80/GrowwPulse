@@ -1,0 +1,2 @@
+[console_scripts]
+groww-pulse = groww_pulse.__main__:cli

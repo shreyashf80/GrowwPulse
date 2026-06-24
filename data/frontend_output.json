@@ -1,0 +1,187 @@
+{
+  "iso_week": "2026-W24",
+  "window_weeks": 12,
+  "reviews_ingested": 1495,
+  "avg_rating": 2.9,
+  "themes": [
+    {
+      "rank": 1,
+      "theme_name": "Investment App",
+      "review_count": 199,
+      "avg_rating": 4.83,
+      "description": "Users praise the app for its investment and trading features, citing its ease of use and useful statistics. The app is well-liked for its simplicity and smooth transactions.",
+      "quotes": [
+        {
+          "text": "very good app for investment i love it",
+          "rating": 5
+        },
+        {
+          "text": "A very good app from an investment point of view",
+          "rating": 5
+        },
+        {
+          "text": "Very Good app to learn and Invest",
+          "rating": 5
+        }
+      ],
+      "action_ideas": [
+        {
+          "title": "Enhance Investment Features",
+          "detail": "Continuously update and expand the app's investment tools and statistics to maintain user satisfaction."
+        },
+        {
+          "title": "Simplify User Interface",
+          "detail": "Conduct usability testing to identify areas for improvement and simplify the interface for an even better user experience."
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "theme_name": "App Glitches",
+      "review_count": 135,
+      "avg_rating": 1.64,
+      "description": "Users are experiencing various technical issues with the Groww app, including glitches, lags, and execution problems, which are resulting in financial losses and frustration. These issues are particularly problematic for traders who require a reliable and efficient platform.",
+      "quotes": [
+        {
+          "text": "So many glitches, execution problem",
+          "rating": 1
+        },
+        {
+          "text": "Multiple Discrepancies, lags while doing Transactions",
+          "rating": 1
+        },
+        {
+          "text": "I faced a serious app glitch while trading, and because of this issue I suffered a significant loss",
+          "rating": 1
+        }
+      ],
+      "action_ideas": [
+        {
+          "title": "Improve App Stability",
+          "detail": "Conduct a thorough review of the app's code and infrastructure to identify and fix the root causes of glitches and lags."
+        },
+        {
+          "title": "Enhance Error Handling",
+          "detail": "Implement more robust error handling mechanisms to prevent financial losses and provide users with timely notifications and support when issues arise."
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "theme_name": "Easy to Use",
+      "review_count": 111,
+      "avg_rating": 4.87,
+      "description": "Users praise the app for its simplicity and ease of use, citing its user-friendly interface as a major advantage. The app's simplicity makes it stand out from others.",
+      "quotes": [
+        {
+          "text": "Ui is very simple and easy to handle as compared to others",
+          "rating": 5
+        },
+        {
+          "text": "excellent and easy user interface provided by this app",
+          "rating": 5
+        },
+        {
+          "text": "easy to use like simple interface",
+          "rating": 5
+        }
+      ],
+      "action_ideas": [
+        {
+          "title": "Simplify Onboarding Process",
+          "detail": "Investigate ways to further simplify the app's onboarding process to enhance the user experience."
+        },
+        {
+          "title": "Maintain Interface Consistency",
+          "detail": "Ensure that all features and updates maintain the app's simple and easy-to-use interface to preserve user satisfaction."
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "theme_name": "High Brokerage Charges",
+      "review_count": 71,
+      "avg_rating": 1.68,
+      "description": "Users are unhappy with the high brokerage charges for stock trading, which are affecting their decision to use the app. The charges are considered exorbitant and not transparent, leading to a poor user experience.",
+      "quotes": [
+        {
+          "text": "exorbitantly hi brokerage charges for stock trading",
+          "rating": 1
+        },
+        {
+          "text": "too much brokerage",
+          "rating": 1
+        },
+        {
+          "text": "the charges are very high rs 5 per trade",
+          "rating": 1
+        }
+      ],
+      "action_ideas": [
+        {
+          "title": "Review Brokerage Charge Structure",
+          "detail": "Re-evaluate the brokerage charge structure to ensure it is competitive and transparent to users."
+        },
+        {
+          "title": "Improve Communication",
+          "detail": "Enhance communication with users regarding changes in brokerage charges and provide clear information on all applicable fees."
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "theme_name": "User Friendly App",
+      "review_count": 71,
+      "avg_rating": 4.79,
+      "description": "Users praise the app for its clean, beginner-friendly, and smooth interface, making it easy to navigate and use for trading and investing. The app's transparency with charges and portfolio tracking is also appreciated.",
+      "quotes": [
+        {
+          "text": "The interface is clean, beginner-friendly, and very smooth to navigate",
+          "rating": 5
+        },
+        {
+          "text": "groww is very good app for trading and it use very easy",
+          "rating": 5
+        },
+        {
+          "text": "The interface is simple, intuitive, and makes it easy for new users to start investing",
+          "rating": 5
+        }
+      ],
+      "action_ideas": [
+        {
+          "title": "Enhance User Experience",
+          "detail": "Continuously gather user feedback to identify areas for improvement and implement updates to maintain a smooth and intuitive interface."
+        },
+        {
+          "title": "Simplify Trading Process",
+          "detail": "Streamline the trading process by reducing the number of steps required to open stocks, mutual funds, and other investment options."
+        }
+      ]
+    }
+  ],
+  "rating_distribution": {
+    "5": 36,
+    "4": 9,
+    "3": 6,
+    "2": 6,
+    "1": 42
+  },
+  "pipeline": {
+    "model": "llama-3.3-70b-versatile",
+    "llm_tokens_used": 3932,
+    "llm_tokens_limit": 100000,
+    "doc_status": "dry_run",
+    "gmail_status": "dry_run",
+    "doc_url": "https://docs.google.com/document/d/1qGjKV6MGJG7niqbaw1xXMk9KzTU-oGP8yEPzYqQqa-w",
+    "run_id": "2026-W24",
+    "run_timestamp": "2026-06-24T18:31:38.521461+00:00"
+  },
+  "email": {
+    "subject": "Groww Review Pulse \u2014 2026-W24",
+    "text_body": "Hi Team,\n\nHere are the top themes from our Groww user reviews for 2026-W24:\n\n- Investment App (199 reviews)\n- App Glitches (135 reviews)\n- Easy to Use (111 reviews)\n- High Brokerage Charges (71 reviews)\n- User Friendly App (71 reviews)\n\nRead full report \u2192 https://docs.google.com/document/d/1qGjKV6MGJG7niqbaw1xXMk9KzTU-oGP8yEPzYqQqa-w",
+    "html_body": "<p>Hi Team,</p>\n<p>Here are the top themes from our Groww user reviews for <strong>2026-W24</strong>:</p>\n<ul>\n  <li><strong>Investment App</strong> (199 reviews)</li>\n  <li><strong>App Glitches</strong> (135 reviews)</li>\n  <li><strong>Easy to Use</strong> (111 reviews)</li>\n  <li><strong>High Brokerage Charges</strong> (71 reviews)</li>\n  <li><strong>User Friendly App</strong> (71 reviews)</li>\n</ul>\n<p><a href=\"https://docs.google.com/document/d/1qGjKV6MGJG7niqbaw1xXMk9KzTU-oGP8yEPzYqQqa-w\">Read full report &rarr;</a></p>",
+    "doc_link": "https://docs.google.com/document/d/1qGjKV6MGJG7niqbaw1xXMk9KzTU-oGP8yEPzYqQqa-w"
+  },
+  "docs_report": "Groww \u2014 Weekly Review Pulse (2026-W24)\n\nPeriod: 12 weeks ending 2026-W24\n\n1. Investment App (199 reviews, Avg Rating: 4.83)\n   Users praise the app for its investment and trading features, citing its ease of use and useful statistics. The app is well-liked for its simplicity and smooth transactions.\n\n   Real User Quotes:\n   > \"very good app for investment i love it\" (5/5)\n   > \"A very good app from an investment point of view\" (5/5)\n   > \"Very Good app to learn and Invest\" (5/5)\n\n   Action Ideas:\n   - Enhance Investment Features: Continuously update and expand the app's investment tools and statistics to maintain user satisfaction.\n   - Simplify User Interface: Conduct usability testing to identify areas for improvement and simplify the interface for an even better user experience.\n\n2. App Glitches (135 reviews, Avg Rating: 1.64)\n   Users are experiencing various technical issues with the Groww app, including glitches, lags, and execution problems, which are resulting in financial losses and frustration. These issues are particularly problematic for traders who require a reliable and efficient platform.\n\n   Real User Quotes:\n   > \"So many glitches, execution problem\" (1/5)\n   > \"Multiple Discrepancies, lags while doing Transactions\" (1/5)\n   > \"I faced a serious app glitch while trading, and because of this issue I suffered a significant loss\" (1/5)\n\n   Action Ideas:\n   - Improve App Stability: Conduct a thorough review of the app's code and infrastructure to identify and fix the root causes of glitches and lags.\n   - Enhance Error Handling: Implement more robust error handling mechanisms to prevent financial losses and provide users with timely notifications and support when issues arise.\n\n3. Easy to Use (111 reviews, Avg Rating: 4.87)\n   Users praise the app for its simplicity and ease of use, citing its user-friendly interface as a major advantage. The app's simplicity makes it stand out from others.\n\n   Real User Quotes:\n   > \"Ui is very simple and easy to handle as compared to others\" (5/5)\n   > \"excellent and easy user interface provided by this app\" (5/5)\n   > \"easy to use like simple interface\" (5/5)\n\n   Action Ideas:\n   - Simplify Onboarding Process: Investigate ways to further simplify the app's onboarding process to enhance the user experience.\n   - Maintain Interface Consistency: Ensure that all features and updates maintain the app's simple and easy-to-use interface to preserve user satisfaction.\n\n4. High Brokerage Charges (71 reviews, Avg Rating: 1.68)\n   Users are unhappy with the high brokerage charges for stock trading, which are affecting their decision to use the app. The charges are considered exorbitant and not transparent, leading to a poor user experience.\n\n   Real User Quotes:\n   > \"exorbitantly hi brokerage charges for stock trading\" (1/5)\n   > \"too much brokerage\" (1/5)\n   > \"the charges are very high rs 5 per trade\" (1/5)\n\n   Action Ideas:\n   - Review Brokerage Charge Structure: Re-evaluate the brokerage charge structure to ensure it is competitive and transparent to users.\n   - Improve Communication: Enhance communication with users regarding changes in brokerage charges and provide clear information on all applicable fees.\n\n5. User Friendly App (71 reviews, Avg Rating: 4.79)\n   Users praise the app for its clean, beginner-friendly, and smooth interface, making it easy to navigate and use for trading and investing. The app's transparency with charges and portfolio tracking is also appreciated.\n\n   Real User Quotes:\n   > \"The interface is clean, beginner-friendly, and very smooth to navigate\" (5/5)\n   > \"groww is very good app for trading and it use very easy\" (5/5)\n   > \"The interface is simple, intuitive, and makes it easy for new users to start investing\" (5/5)\n\n   Action Ideas:\n   - Enhance User Experience: Continuously gather user feedback to identify areas for improvement and implement updates to maintain a smooth and intuitive interface.\n   - Simplify Trading Process: Streamline the trading process by reducing the number of steps required to open stocks, mutual funds, and other investment options.\n\n---\n\n"
+}

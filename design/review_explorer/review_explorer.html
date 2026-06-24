@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Review Explorer | Groww Review Pulse</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-variant": "#2e372e",
+                    "surface": "#0d150d",
+                    "error": "#ffb4ab",
+                    "on-tertiary-fixed": "#410003",
+                    "tertiary-container": "#ff8d84",
+                    "on-error-container": "#ffdad6",
+                    "on-primary-container": "#004c1b",
+                    "primary": "#3fe56c",
+                    "surface-dim": "#0d150d",
+                    "on-secondary-container": "#623400",
+                    "on-background": "#dce5d7",
+                    "error-container": "#93000a",
+                    "surface-container-lowest": "#081008",
+                    "inverse-on-surface": "#2a3329",
+                    "on-primary-fixed-variant": "#00531e",
+                    "surface-container": "#192219",
+                    "on-secondary-fixed": "#2e1500",
+                    "secondary-fixed": "#ffdcc2",
+                    "primary-fixed-dim": "#3ce36a",
+                    "on-secondary": "#4c2700",
+                    "primary-fixed": "#69ff87",
+                    "secondary-container": "#ff8f00",
+                    "secondary": "#ffb77a",
+                    "on-tertiary": "#680008",
+                    "secondary-fixed-dim": "#ffb77a",
+                    "on-tertiary-container": "#88000e",
+                    "outline": "#869583",
+                    "on-surface-variant": "#bbcbb8",
+                    "on-tertiary-fixed-variant": "#930010",
+                    "outline-variant": "#3c4a3c",
+                    "inverse-primary": "#006e2a",
+                    "surface-tint": "#3ce36a",
+                    "surface-container-highest": "#2e372e",
+                    "tertiary-fixed-dim": "#ffb3ac",
+                    "on-primary": "#003912",
+                    "tertiary-fixed": "#ffdad6",
+                    "background": "#0d150d",
+                    "surface-container-low": "#151e15",
+                    "on-primary-fixed": "#002108",
+                    "on-surface": "#dce5d7",
+                    "on-error": "#690005",
+                    "surface-bright": "#333b32",
+                    "inverse-surface": "#dce5d7",
+                    "on-secondary-fixed-variant": "#6d3a00",
+                    "tertiary": "#ffb7b0",
+                    "primary-container": "#00c853",
+                    "surface-container-high": "#242c23"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-sm": "8px",
+                    "container-padding": "24px",
+                    "stack-md": "16px",
+                    "unit": "4px",
+                    "stack-lg": "32px",
+                    "gutter": "16px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "headline-lg-mobile": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "mono-data": ["Inter"],
+                    "title-md": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "label-md": ["Inter"]
+            },
+            "fontSize": {
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "mono-data": ["14px", {"lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #0d150d;
+            color: #dce5d7;
+            -webkit-font-smoothing: antialiased;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(24px);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .active-nav-underline {
+            position: relative;
+        }
+        .active-nav-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #3fe56c;
+            box-shadow: 0 0 8px rgba(63, 229, 108, 0.5);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(255,255,255,0.02);
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(63, 229, 108, 0.2);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col font-body-lg">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/30 backdrop-blur-3xl border-b border-white/10 flex justify-between items-center h-16 px-container-padding">
+<div class="flex items-center gap-stack-lg">
+<span class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-primary">Groww Review Pulse</span>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-on-surface-variant font-medium pb-1 hover:text-primary transition-colors duration-200" href="#">Weekly Pulse</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 active-nav-underline" href="#">Review Explorer</a>
+</nav>
+</div>
+<div class="flex items-center gap-stack-md">
+<button class="glass-card px-4 py-1.5 rounded-lg text-label-md flex items-center gap-2">
+                Week Selector <span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<div class="flex items-center gap-3 ml-4">
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer transition-all active:scale-95" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer transition-all active:scale-95" data-icon="settings">settings</span>
+<div class="w-8 h-8 rounded-full bg-surface-container overflow-hidden border border-white/10">
+<img alt="User avatar" class="w-full h-full object-cover" data-alt="A professional user profile avatar in a minimalist digital workspace. The lighting is soft and ambient with deep emerald and charcoal tones, reflecting the high-performance fintech analytics aesthetic of the Groww Review Pulse platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjxgNVhmCdxWNRSXGqDe45xGRro0CQFmUlHmvAjvwRvlrlJWYIf9z1Yv3P80OEFJzfvWvGR74I-o_YmLKZfNvThRe35lokW6m8L3mxUvAPzFcyQbsUgDov3SDsPKpjQn3S24yROUPiD0yojkAKwFeGm0WIq6FgSCwRNSsZa44P6GVJDGNweHwYkrzTSZrJcneo90smZl77E-vpB2J65X1JIIS0r8EwKrLYlfkTKxDneRZbqIqLEMGVXHrMtgXzbKq5PvReVlvoqTwA"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Sidebar (for desktop consistency as per shared components) -->
+<aside class="fixed left-0 top-0 h-full w-60 border-r border-white/10 bg-surface-container-lowest/50 backdrop-blur-2xl hidden lg:flex flex-col py-stack-md pt-20 z-40">
+<div class="px-6 mb-8">
+<h2 class="font-title-md text-title-md font-black text-on-surface">Groww Pulse</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant opacity-70">Fintech Analytics</p>
+</div>
+<nav class="flex-1 px-2 space-y-1">
+<a class="flex items-center gap-3 px-4 py-2.5 text-on-surface-variant hover:bg-white/5 rounded-lg transition-all duration-200 group" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-body-sm">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2.5 text-on-surface-variant hover:bg-white/5 rounded-lg transition-all duration-200 group" href="#">
+<span class="material-symbols-outlined" data-icon="query_stats">query_stats</span>
+<span class="font-body-sm">Analytics</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2.5 bg-primary-container text-on-primary-container rounded-lg mx-2 my-1 shadow-lg shadow-primary/10" href="#">
+<span class="material-symbols-outlined" data-icon="mood">mood</span>
+<span class="font-body-sm font-semibold">Sentiment</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2.5 text-on-surface-variant hover:bg-white/5 rounded-lg transition-all duration-200 group" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="font-body-sm">History</span>
+</a>
+</nav>
+<div class="px-4 mt-auto mb-6">
+<button class="w-full bg-primary py-2.5 rounded-lg text-on-primary font-bold active:scale-95 transition-all shadow-lg shadow-primary/20">Generate Report</button>
+</div>
+<div class="px-2 pb-4 border-t border-white/5 pt-4">
+<a class="flex items-center gap-3 px-4 py-2 text-on-surface-variant hover:text-on-surface text-body-sm" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="help">help</span> Support
+            </a>
+<a class="flex items-center gap-3 px-4 py-2 text-on-surface-variant hover:text-on-surface text-body-sm" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="settings">settings</span> Settings
+            </a>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 mt-16 lg:ml-60 flex flex-col p-container-padding gap-gutter overflow-y-auto custom-scrollbar">
+<!-- Section A: Filter Bar (Sticky) -->
+<section class="sticky top-0 z-30 -mx-container-padding px-container-padding py-stack-md bg-surface/80 backdrop-blur-md border-b border-white/5">
+<div class="glass-card p-4 rounded-xl flex flex-wrap items-center gap-4">
+<!-- Search -->
+<div class="flex-1 min-w-[280px] relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant" data-icon="search">search</span>
+<input class="w-full bg-surface-container-low border border-white/10 rounded-lg py-2 pl-10 pr-4 focus:ring-1 focus:ring-primary focus:border-primary outline-none text-body-sm transition-all" placeholder="Search reviews by keyword..." type="text"/>
+</div>
+<!-- 5-Star Toggle -->
+<div class="flex items-center gap-1 bg-surface-container-low p-1 rounded-lg border border-white/10">
+<button class="px-3 py-1.5 rounded-md hover:bg-white/5 text-label-md flex items-center gap-1 transition-all"><span class="text-primary">5</span><span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span></button>
+<button class="px-3 py-1.5 rounded-md hover:bg-white/5 text-label-md flex items-center gap-1"><span class="text-primary">4</span><span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span></button>
+<button class="px-3 py-1.5 rounded-md hover:bg-white/5 text-label-md flex items-center gap-1"><span class="text-primary">3</span><span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span></button>
+<button class="px-3 py-1.5 rounded-md hover:bg-white/5 text-label-md flex items-center gap-1"><span class="text-primary">2</span><span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span></button>
+<button class="px-3 py-1.5 rounded-md hover:bg-white/5 text-label-md flex items-center gap-1"><span class="text-primary">1</span><span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span></button>
+</div>
+<!-- Dropdowns -->
+<div class="flex items-center gap-stack-sm">
+<select class="bg-surface-container-low border border-white/10 rounded-lg px-3 py-2 text-label-md outline-none focus:ring-1 focus:ring-primary appearance-none pr-8 relative cursor-pointer">
+<option>v18.11.1</option>
+<option>v18.10.1</option>
+<option>v18.09.2</option>
+</select>
+<select class="bg-surface-container-low border border-white/10 rounded-lg px-3 py-2 text-label-md outline-none focus:ring-1 focus:ring-primary appearance-none pr-8 cursor-pointer">
+<option>Sort: Most Helpful</option>
+<option>Sort: Newest</option>
+<option>Sort: Oldest</option>
+</select>
+<div class="flex items-center gap-2 bg-surface-container-low border border-white/10 rounded-lg px-3 py-2 text-label-md cursor-pointer">
+<span class="material-symbols-outlined text-sm" data-icon="calendar_today">calendar_today</span>
+<span>Date Range</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section B: Distribution -->
+<section class="w-full">
+<div class="glass-card p-stack-md rounded-xl overflow-hidden">
+<div class="flex justify-between items-end mb-stack-sm">
+<h3 class="font-title-md text-title-md font-bold">Rating Distribution</h3>
+<span class="text-label-md text-on-surface-variant">Last 30 Days</span>
+</div>
+<div class="h-10 w-full flex rounded-full overflow-hidden border border-white/5 bg-surface-container-highest/30">
+<div class="h-full bg-primary-container flex items-center justify-center text-[10px] font-bold text-on-primary-container transition-all hover:brightness-110" style="width: 40%">40%</div>
+<div class="h-full bg-primary/60 flex items-center justify-center text-[10px] font-bold text-on-primary-fixed-variant border-l border-white/10" style="width: 15%">15%</div>
+<div class="h-full bg-secondary-container flex items-center justify-center text-[10px] font-bold text-on-secondary-container border-l border-white/10" style="width: 10%">10%</div>
+<div class="h-full bg-secondary/60 flex items-center justify-center text-[10px] font-bold text-on-secondary-fixed-variant border-l border-white/10" style="width: 8%">8%</div>
+<div class="h-full bg-error-container flex items-center justify-center text-[10px] font-bold text-on-error-container border-l border-white/10" style="width: 27%">27%</div>
+</div>
+<div class="flex justify-between mt-stack-sm text-label-md text-on-surface-variant px-1">
+<div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-primary-container"></span> 5★</div>
+<div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-primary/60"></span> 4★</div>
+<div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-secondary-container"></span> 3★</div>
+<div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-secondary/60"></span> 2★</div>
+<div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-error-container"></span> 1★</div>
+</div>
+</div>
+</section>
+<!-- Section C: Review Feed -->
+<section class="flex flex-col gap-gutter max-w-4xl">
+<!-- Review 1 -->
+<div class="glass-card p-6 rounded-xl flex flex-col gap-4 group">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-high border border-white/10 flex items-center justify-center font-bold text-primary">N</div>
+<div>
+<h4 class="font-body-lg font-bold">Nilesh R Patil</h4>
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+<div class="text-right">
+<span class="bg-secondary-container/20 text-secondary-container px-3 py-1 rounded-full text-label-md font-bold">Feature Requests</span>
+<p class="text-label-md text-on-surface-variant mt-2">v18.11.1</p>
+</div>
+</div>
+<p class="font-body-lg text-on-surface leading-relaxed">"please add stochastic indicator..."</p>
+<div class="flex items-center gap-6 border-t border-white/5 pt-4 mt-2">
+<button class="flex items-center gap-2 text-label-md text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="thumb_up">thumb_up</span>
+                        5,651
+                    </button>
+<button class="flex items-center gap-2 text-label-md text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="reply">reply</span>
+                        Reply
+                    </button>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="glass-card p-6 rounded-xl flex flex-col gap-4 border-l-4 border-l-error/40">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-error-container/20 border border-error/20 flex items-center justify-center font-bold text-error">S</div>
+<div>
+<h4 class="font-body-lg font-bold uppercase">SouraBH RaNA</h4>
+<div class="flex items-center gap-1 text-error">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 0;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 0;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 0;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 0;">star</span>
+</div>
+</div>
+</div>
+<div class="text-right">
+<span class="bg-error-container/20 text-error px-3 py-1 rounded-full text-label-md font-bold">Trading Issues</span>
+<p class="text-label-md text-on-surface-variant mt-2">v18.11.1</p>
+</div>
+</div>
+<p class="font-body-lg text-on-surface leading-relaxed">"Worst app for trading. Sell target at 100 executed at 95..."</p>
+<div class="flex items-center gap-6 border-t border-white/5 pt-4 mt-2">
+<button class="flex items-center gap-2 text-label-md text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="thumb_up">thumb_up</span>
+                        0
+                    </button>
+<button class="flex items-center gap-2 text-label-md text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="reply">reply</span>
+                        Escalate
+                    </button>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="glass-card p-6 rounded-xl flex flex-col gap-4 border-l-4 border-l-primary/40">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 border border-primary/20 flex items-center justify-center font-bold text-primary">S</div>
+<div>
+<h4 class="font-body-lg font-bold uppercase">SHYAM MOHAN PANDEY</h4>
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+<div class="text-right">
+<span class="bg-primary-container/20 text-primary-container px-3 py-1 rounded-full text-label-md font-bold">Good Investment App</span>
+<p class="text-label-md text-on-surface-variant mt-2">v18.10.1</p>
+</div>
+</div>
+<p class="font-body-lg text-on-surface leading-relaxed">"Beginner-friendly investment app. Simple SIP..."</p>
+<div class="flex items-center gap-6 border-t border-white/5 pt-4 mt-2">
+<button class="flex items-center gap-2 text-label-md text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="thumb_up">thumb_up</span>
+                        3
+                    </button>
+<button class="flex items-center gap-2 text-label-md text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="reply">reply</span>
+                        Thank User
+                    </button>
+</div>
+</div>
+<!-- Pagination -->
+<div class="flex items-center justify-center gap-8 py-8 border-t border-white/5">
+<button class="flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors font-medium">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+                    Previous
+                </button>
+<span class="font-mono-data text-mono-data text-on-surface">Page 1 of 83</span>
+<button class="flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors font-medium">
+                    Next
+                    <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-4 border-t border-white/5 bg-surface flex justify-between items-center px-container-padding opacity-60">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Powered by UMAP Analytics Engine</span>
+<div class="flex gap-6">
+<span class="font-label-md text-label-md text-on-surface-variant">Last run: 2 mins ago</span>
+<span class="font-label-md text-label-md text-primary flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+                System Status: Healthy
+            </span>
+</div>
+</footer>
+<!-- Atmosphere/Micro-interaction Layer -->
+<div class="fixed inset-0 pointer-events-none -z-10 opacity-20 overflow-hidden">
+<div class="absolute -top-[10%] -left-[10%] w-[50%] h-[50%] bg-primary/20 blur-[120px] rounded-full"></div>
+<div class="absolute -bottom-[10%] -right-[10%] w-[50%] h-[50%] bg-secondary/10 blur-[120px] rounded-full"></div>
+</div>
+<script>
+        // Micro-interactions for glass cards and interactive elements
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-2px)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Filter toggle simulation
+        document.querySelectorAll('button[data-star]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.classList.toggle('bg-white/10');
+            });
+        });
+    </script>
+</body></html>

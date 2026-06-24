@@ -1,0 +1,30 @@
+# Groww Review Pulse — Runtime Configuration
+# See docs/architecture.md §8 for field descriptions.
+
+product:
+  name: "Groww"
+  play_store_app_id: "com.nextbillion.groww"
+
+ingestion:
+  window_weeks: 12          # Rolling window for review fetching
+  max_reviews: 2000         # Safety cap on total reviews ingested
+
+clustering:
+  umap_n_components: 5
+  umap_n_neighbors: 15
+  hdbscan_min_cluster_size: 10
+  hdbscan_min_samples: 5
+
+llm:
+  model: "llama-3.3-70b-versatile"
+  temperature: 0.2
+  max_tokens: 100000
+  quote_validation: true    # Enforce verbatim quote match against source reviews
+
+delivery:
+  google_doc_id: "1qGjKV6MGJG7niqbaw1xXMk9KzTU-oGP8yEPzYqQqa-w"         # Set to the target Google Doc ID before first run
+  email_recipients: [shreyashf80@gmail.com]      # e.g. ["product-team@groww.in", "support-leads@groww.in"]
+  draft_only: false         # Override with --draft-only CLI flag
+
+receipts:
+  storage_path: "data/receipts/"

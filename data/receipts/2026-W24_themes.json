@@ -1,0 +1,167 @@
+[
+  {
+    "theme_name": "Investment App",
+    "description": "Users praise the app for its investment and trading features, citing its ease of use and useful statistics. The app is well-liked for its simplicity and smooth transactions.",
+    "quotes": [
+      {
+        "text": "very good app for investment i love it",
+        "doc_id": "doc_911",
+        "rating": 5
+      },
+      {
+        "text": "A very good app from an investment point of view",
+        "doc_id": "doc_1484",
+        "rating": 5
+      },
+      {
+        "text": "Very Good app to learn and Invest",
+        "doc_id": "doc_1159",
+        "rating": 5
+      }
+    ],
+    "action_ideas": [
+      {
+        "title": "Enhance Investment Features",
+        "detail": "Continuously update and expand the app's investment tools and statistics to maintain user satisfaction."
+      },
+      {
+        "title": "Simplify User Interface",
+        "detail": "Conduct usability testing to identify areas for improvement and simplify the interface for an even better user experience."
+      }
+    ],
+    "review_count": 199,
+    "avg_rating": 4.83
+  },
+  {
+    "theme_name": "App Glitches",
+    "description": "Users are experiencing various technical issues with the Groww app, including glitches, lags, and execution problems, which are resulting in financial losses and frustration. These issues are particularly problematic for traders who require a reliable and efficient platform.",
+    "quotes": [
+      {
+        "text": "So many glitches, execution problem",
+        "doc_id": "doc_1180",
+        "rating": 1
+      },
+      {
+        "text": "Multiple Discrepancies, lags while doing Transactions",
+        "doc_id": "doc_979",
+        "rating": 1
+      },
+      {
+        "text": "I faced a serious app glitch while trading, and because of this issue I suffered a significant loss",
+        "doc_id": "doc_99",
+        "rating": 1
+      }
+    ],
+    "action_ideas": [
+      {
+        "title": "Improve App Stability",
+        "detail": "Conduct a thorough review of the app's code and infrastructure to identify and fix the root causes of glitches and lags."
+      },
+      {
+        "title": "Enhance Error Handling",
+        "detail": "Implement more robust error handling mechanisms to prevent financial losses and provide users with timely notifications and support when issues arise."
+      }
+    ],
+    "review_count": 135,
+    "avg_rating": 1.64
+  },
+  {
+    "theme_name": "Easy to Use",
+    "description": "Users praise the app for its simplicity and ease of use, citing its user-friendly interface as a major advantage. The app's simplicity makes it stand out from others.",
+    "quotes": [
+      {
+        "text": "Ui is very simple and easy to handle as compared to others",
+        "doc_id": "doc_353",
+        "rating": 5
+      },
+      {
+        "text": "excellent and easy user interface provided by this app",
+        "doc_id": "doc_1355",
+        "rating": 5
+      },
+      {
+        "text": "easy to use like simple interface",
+        "doc_id": "doc_1233",
+        "rating": 5
+      }
+    ],
+    "action_ideas": [
+      {
+        "title": "Simplify Onboarding Process",
+        "detail": "Investigate ways to further simplify the app's onboarding process to enhance the user experience."
+      },
+      {
+        "title": "Maintain Interface Consistency",
+        "detail": "Ensure that all features and updates maintain the app's simple and easy-to-use interface to preserve user satisfaction."
+      }
+    ],
+    "review_count": 111,
+    "avg_rating": 4.87
+  },
+  {
+    "theme_name": "High Brokerage Charges",
+    "description": "Users are unhappy with the high brokerage charges for stock trading, which are affecting their decision to use the app. The charges are considered exorbitant and not transparent, leading to a poor user experience.",
+    "quotes": [
+      {
+        "text": "exorbitantly hi brokerage charges for stock trading",
+        "doc_id": "doc_611",
+        "rating": 1
+      },
+      {
+        "text": "too much brokerage",
+        "doc_id": "doc_995",
+        "rating": 1
+      },
+      {
+        "text": "the charges are very high rs 5 per trade",
+        "doc_id": "doc_550",
+        "rating": 1
+      }
+    ],
+    "action_ideas": [
+      {
+        "title": "Review Brokerage Charge Structure",
+        "detail": "Re-evaluate the brokerage charge structure to ensure it is competitive and transparent to users."
+      },
+      {
+        "title": "Improve Communication",
+        "detail": "Enhance communication with users regarding changes in brokerage charges and provide clear information on all applicable fees."
+      }
+    ],
+    "review_count": 71,
+    "avg_rating": 1.68
+  },
+  {
+    "theme_name": "User Friendly App",
+    "description": "Users praise the app for its clean, beginner-friendly, and smooth interface, making it easy to navigate and use for trading and investing. The app's transparency with charges and portfolio tracking is also appreciated.",
+    "quotes": [
+      {
+        "text": "The interface is clean, beginner-friendly, and very smooth to navigate",
+        "doc_id": "doc_672",
+        "rating": 5
+      },
+      {
+        "text": "groww is very good app for trading and it use very easy",
+        "doc_id": "doc_20",
+        "rating": 5
+      },
+      {
+        "text": "The interface is simple, intuitive, and makes it easy for new users to start investing",
+        "doc_id": "doc_965",
+        "rating": 5
+      }
+    ],
+    "action_ideas": [
+      {
+        "title": "Enhance User Experience",
+        "detail": "Continuously gather user feedback to identify areas for improvement and implement updates to maintain a smooth and intuitive interface."
+      },
+      {
+        "title": "Simplify Trading Process",
+        "detail": "Streamline the trading process by reducing the number of steps required to open stocks, mutual funds, and other investment options."
+      }
+    ],
+    "review_count": 71,
+    "avg_rating": 4.79
+  }
+]

@@ -1,0 +1,104 @@
+============================================================
+  Groww Review Pulse  v0.1.0
+============================================================
+
+  Product      : Groww
+  App ID       : com.nextbillion.groww
+  ISO Week     : 2026-W24
+  Window       : 12 weeks
+  Max reviews  : 2000
+  LLM model    : llama-3.3-70b-versatile
+  Dry-run      : Yes
+  Draft-only   : No
+
+------------------------------------------------------------
+
+  [*] 1. Ingest reviews & 2. PII scrubbing
+  [*] 3. Clustering (UMAP + HDBSCAN)
+  [*] 4. LLM summarization
+  [*] 5. Report rendering
+
+--- Dry Run: Docs Payload ---
+Groww — Weekly Review Pulse (2026-W24)
+
+Period: 12 weeks ending 2026-W24
+
+1. Good Investment App (193 reviews, Avg Rating: 4.83)
+   Users praise the app for being good for investment and trading, with a simple and easy-to-use interface. The app is also commended for its quick support and fast transactions.
+
+   Real User Quotes:
+   > "very good app for investment i love it" (5/5)
+   > "Very Good app to learn and Invest" (5/5)
+   > "nice app with quick support easy to invest or trade" (4/5)
+
+   Action Ideas:
+   - Improve User Interface: Continuously gather user feedback to further simplify and improve the app's interface for easier investment and trading.
+   - Enhance Support Services: Invest in providing quick and reliable support to users, ensuring their issues are resolved promptly and efficiently.
+
+2. Trading Issues (112 reviews, Avg Rating: 1.66)
+   Users are experiencing various issues while trading on the Groww app, including glitches, execution problems, and discrepancies in transactions. These issues are leading to a poor user experience and potential financial losses.
+
+   Real User Quotes:
+   > "So many glitches, execution problem" (1/5)
+   > "Multiple Discrepancies, lags while doing Transactions" (1/5)
+   > "they are taking too much charges maybe this app is good for investing not for trading at all" (1/5)
+
+   Action Ideas:
+   - Improve Trading Infrastructure: Invest in upgrading the trading platform to reduce glitches, execution problems, and discrepancies in transactions.
+   - Enhance Transparency and Customer Support: Provide clear transaction details, and improve customer support to address user concerns and issues in a timely and effective manner.
+
+3. Easy Interface (111 reviews, Avg Rating: 4.83)
+   Users praise the app for its simple and easy-to-use interface. The app's ease of use is a major factor in its positive reviews.
+
+   Real User Quotes:
+   > "easy user interface" (5/5)
+   > "Ui is very simple and easy to handle" (5/5)
+   > "simple interface" (5/5)
+
+   Action Ideas:
+   - Simplify Navigation: Investigate ways to further simplify the app's navigation and interface to improve user experience.
+   - Consistency Check: Conduct a review to ensure consistency in the app's interface across all features and platforms.
+
+4. Poor Customer Support (89 reviews, Avg Rating: 1.28)
+   Users are unhappy with the app's customer support, citing unresponsive and unhelpful service. The app is also plagued by technical issues, further exacerbating the problem.
+
+   Real User Quotes:
+   > "Their customer support is hell" (1/5)
+   > "customer care not responding" (1/5)
+   > "totally useless customer service" (1/5)
+
+   Action Ideas:
+   - Improve Customer Support: Hire more support staff and provide them with training to effectively address customer issues in a timely manner.
+   - Fix Technical Issues: Invest in debugging and testing to resolve glitches and faults that are contributing to the poor customer experience.
+
+5. Feature Requests (69 reviews, Avg Rating: 3.86)
+   Users are requesting additional features to enhance their investment experience, such as custom portfolio tracking and detailed investment information. These features would help users make more informed decisions and improve their overall satisfaction with the app.
+
+   Real User Quotes:
+   > "please provide a different section for ETF's where a investor can see the percentage of money invested in a single company like MF" (4/5)
+   > "add a rolling returns feature that helps a lot for investers" (5/5)
+   > "please provide custom portfolio tracking in mutual funds section" (4/5)
+
+   Action Ideas:
+   - Implement Custom Portfolio Tracking: Develop a feature that allows users to track their portfolios in detail, including custom mutual fund tracking and combined portfolio views.
+   - Add Detailed Investment Information: Provide users with detailed information about their investments, such as average price and rolling returns, to help them make more informed decisions.
+
+---
+
+
+
+--- Dry Run: Email HTML Body ---
+<p>Hi Team,</p>
+<p>Here are the top themes from our Groww user reviews for <strong>2026-W24</strong>:</p>
+<ul>
+  <li><strong>Good Investment App</strong> (193 reviews)</li>
+  <li><strong>Trading Issues</strong> (112 reviews)</li>
+  <li><strong>Easy Interface</strong> (111 reviews)</li>
+  <li><strong>Poor Customer Support</strong> (89 reviews)</li>
+  <li><strong>Feature Requests</strong> (69 reviews)</li>
+</ul>
+<p><a href="https://docs.google.com/">Read full report &rarr;</a></p>
+
+Token usage: {'total_tokens': 3833}
+
+✓ Render complete (dry-run). No delivery attempted.

@@ -1,0 +1,65 @@
+[build-system]
+requires = ["setuptools>=64.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "groww-pulse"
+version = "0.1.0"
+description = "Automated weekly pulse that turns Groww's Google Play Store reviews into insight reports, delivered via MCP to Google Docs and Gmail."
+requires-python = ">=3.9"
+readme = "README.md"
+
+dependencies = [
+    # CLI
+    "click>=8.1",
+    # Config
+    "pyyaml>=6.0",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+mcp = [
+    "mcp>=1.0.0",
+]
+scraper = [
+    "google-play-scraper>=1.2.4",
+    "emoji>=2.0.0",
+    "langdetect>=1.0.9",
+]
+ml = [
+    "sentence-transformers>=2.2",
+    "umap-learn>=0.5",
+    "hdbscan>=0.8",
+    "numpy>=1.24",
+]
+llm = [
+    "groq>=0.9.0",
+    "tiktoken>=0.7.0",
+]
+all = [
+    "groww-pulse[mcp,scraper,ml,llm]",
+]
+dev = [
+    "pytest>=7.0",
+    "pytest-asyncio>=0.21",
+    "ruff>=0.4",
+]
+
+[project.scripts]
+groww-pulse = "groww_pulse.__main__:cli"
+
+[tool.setuptools.packages.find]
+include = ["groww_pulse*", "mcp_servers*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+markers = [
+    "integration: marks tests that hit external services (deselect with '-m \"not integration\"')",
+]

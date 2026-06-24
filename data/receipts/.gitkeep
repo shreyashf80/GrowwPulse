@@ -1,0 +1,3 @@
+# This directory stores run receipt JSON files.
+# Each file is named: groww_{ISO_WEEK}.json (e.g. groww_2026-W24.json)
+# See docs/architecture.md §6 for the receipt schema.
