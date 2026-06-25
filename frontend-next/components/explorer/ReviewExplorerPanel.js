@@ -121,18 +121,26 @@ export default function ReviewExplorerPanel({ reviews }) {
           <h3>Rating Distribution</h3>
           <span>Last 30 Days</span>
         </div>
-        <div className={styles.distTrack}>
-          {dist.map(d => (
-            <div
-              key={d.star}
-              className={`${styles.distSegment} ${styles['s'+d.star]}`}
-              style={{ width: `${d.pct}%` }}
-              title={`${d.star}★: ${d.pct}%`}
-              onClick={() => toggleStar(d.star)}
-            >
-              {d.pct}%
-            </div>
-          ))}
+        <div className={styles.distContainer}>
+          <div className={styles.distTrack}>
+            {dist.map(d => (
+              <div
+                key={d.star}
+                className={`${styles.distSegment} ${styles['s'+d.star]}`}
+                style={{ width: `${d.pct}%` }}
+                onClick={() => toggleStar(d.star)}
+              >
+                {d.pct}%
+              </div>
+            ))}
+          </div>
+          <div className={styles.distLabels}>
+            {dist.map(d => (
+              <div key={d.star} style={{ width: `${d.pct}%` }} className={styles.distLabel}>
+                {d.star}★
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 

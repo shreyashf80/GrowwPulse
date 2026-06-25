@@ -13,7 +13,7 @@ export async function POST(request) {
     const args = [
       '-m', 'groww_pulse', 'run',
       '--week', isoWeek,
-      '--dry-run',
+      '--draft-only',
       '--export-frontend',
     ];
 

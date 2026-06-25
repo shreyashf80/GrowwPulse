@@ -367,6 +367,10 @@ def run(
                     return
                 
             click.secho(f"\nToken usage: {token_usage}", fg="yellow")
+
+            if export_frontend:
+                _export_frontend_output(themes, reviews, week, config, token_usage,
+                                        docs_payload=docs_payload, email_payload=email_payload)
             
             click.secho("\n" + "=" * 60, fg="cyan", bold=True)
             click.secho(f"  Groww Review Pulse Run Summary: {week}", fg="cyan", bold=True)

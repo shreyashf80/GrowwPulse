@@ -1,167 +1,167 @@
 [
   {
-    "theme_name": "Investment App",
-    "description": "Users praise the app for its investment and trading features, citing its ease of use and useful statistics. The app is well-liked for its simplicity and smooth transactions.",
+    "theme_name": "Investing and Trading",
+    "description": "Users praise the app for its ease of use and effectiveness in trading and investing, with many appreciating its simple interface and quick support. The app is also commended for providing useful statistics.",
     "quotes": [
       {
-        "text": "very good app for investment i love it",
-        "doc_id": "doc_911",
-        "rating": 5
-      },
-      {
-        "text": "A very good app from an investment point of view",
-        "doc_id": "doc_1484",
+        "text": "great for trading and investing",
+        "doc_id": "doc_67",
         "rating": 5
       },
       {
         "text": "Very Good app to learn and Invest",
-        "doc_id": "doc_1159",
+        "doc_id": "doc_1180",
         "rating": 5
+      },
+      {
+        "text": "very nice app for those looking for trading, investing in equity and MF",
+        "doc_id": "doc_605",
+        "rating": 4
       }
     ],
     "action_ideas": [
       {
-        "title": "Enhance Investment Features",
-        "detail": "Continuously update and expand the app's investment tools and statistics to maintain user satisfaction."
+        "title": "Enhance User Interface",
+        "detail": "Continuously gather user feedback to further simplify and improve the app's interface for easier trading and investing."
       },
       {
-        "title": "Simplify User Interface",
-        "detail": "Conduct usability testing to identify areas for improvement and simplify the interface for an even better user experience."
+        "title": "Expand Investment Options",
+        "detail": "Consider adding more investment options, such as additional equity or mutual fund choices, to cater to a broader range of user interests."
       }
     ],
-    "review_count": 199,
-    "avg_rating": 4.83
+    "review_count": 192,
+    "avg_rating": 4.82
   },
   {
     "theme_name": "App Glitches",
-    "description": "Users are experiencing various technical issues with the Groww app, including glitches, lags, and execution problems, which are resulting in financial losses and frustration. These issues are particularly problematic for traders who require a reliable and efficient platform.",
+    "description": "Users are experiencing various technical issues with the Groww app, including glitches, lags, and execution problems, which are resulting in significant losses and poor user experience. These issues are particularly problematic for traders who require a reliable and efficient platform.",
     "quotes": [
       {
         "text": "So many glitches, execution problem",
-        "doc_id": "doc_1180",
+        "doc_id": "doc_1201",
         "rating": 1
       },
       {
         "text": "Multiple Discrepancies, lags while doing Transactions",
-        "doc_id": "doc_979",
+        "doc_id": "doc_1000",
         "rating": 1
       },
       {
         "text": "I faced a serious app glitch while trading, and because of this issue I suffered a significant loss",
-        "doc_id": "doc_99",
+        "doc_id": "doc_120",
         "rating": 1
       }
     ],
     "action_ideas": [
       {
         "title": "Improve App Stability",
-        "detail": "Conduct a thorough review of the app's code and infrastructure to identify and fix the root causes of glitches and lags."
+        "detail": "Conduct a thorough review of the app's code and infrastructure to identify and fix the root causes of glitches and lags, and implement measures to prevent such issues in the future."
       },
       {
         "title": "Enhance Error Handling",
-        "detail": "Implement more robust error handling mechanisms to prevent financial losses and provide users with timely notifications and support when issues arise."
+        "detail": "Develop and implement more robust error handling mechanisms to minimize the impact of technical issues on users and provide timely notifications and support to affected users."
       }
     ],
-    "review_count": 135,
-    "avg_rating": 1.64
+    "review_count": 130,
+    "avg_rating": 1.71
   },
   {
     "theme_name": "Easy to Use",
-    "description": "Users praise the app for its simplicity and ease of use, citing its user-friendly interface as a major advantage. The app's simplicity makes it stand out from others.",
+    "description": "Users praise the app for its simplicity and ease of use, citing its user-friendly interface as a major advantage. This simplicity makes the app more accessible and enjoyable for users.",
     "quotes": [
       {
-        "text": "Ui is very simple and easy to handle as compared to others",
-        "doc_id": "doc_353",
-        "rating": 5
-      },
-      {
-        "text": "excellent and easy user interface provided by this app",
-        "doc_id": "doc_1355",
+        "text": "Ui is very simple and easy to handle",
+        "doc_id": "doc_374",
         "rating": 5
       },
       {
         "text": "easy to use like simple interface",
-        "doc_id": "doc_1233",
+        "doc_id": "doc_1254",
+        "rating": 5
+      },
+      {
+        "text": "excellent and easy user interface",
+        "doc_id": "doc_1376",
         "rating": 5
       }
     ],
     "action_ideas": [
       {
-        "title": "Simplify Onboarding Process",
-        "detail": "Investigate ways to further simplify the app's onboarding process to enhance the user experience."
+        "title": "Simplify App Navigation",
+        "detail": "Investigate ways to further simplify the app's navigation and interface to enhance user experience."
       },
       {
-        "title": "Maintain Interface Consistency",
-        "detail": "Ensure that all features and updates maintain the app's simple and easy-to-use interface to preserve user satisfaction."
+        "title": "Maintain Intuitive Design",
+        "detail": "Continue to prioritize intuitive design principles when updating or expanding the app's features to maintain its ease of use."
       }
     ],
-    "review_count": 111,
-    "avg_rating": 4.87
+    "review_count": 113,
+    "avg_rating": 4.86
   },
   {
     "theme_name": "High Brokerage Charges",
-    "description": "Users are unhappy with the high brokerage charges for stock trading, which are affecting their decision to use the app. The charges are considered exorbitant and not transparent, leading to a poor user experience.",
+    "description": "Users are unhappy with the high brokerage charges for stock trading, which are affecting their decision to use the app. The charges are considered exorbitant and not transparent, leading to a loss of trust and a negative experience.",
     "quotes": [
       {
         "text": "exorbitantly hi brokerage charges for stock trading",
-        "doc_id": "doc_611",
-        "rating": 1
-      },
-      {
-        "text": "too much brokerage",
-        "doc_id": "doc_995",
+        "doc_id": "doc_632",
         "rating": 1
       },
       {
         "text": "the charges are very high rs 5 per trade",
-        "doc_id": "doc_550",
+        "doc_id": "doc_571",
+        "rating": 1
+      },
+      {
+        "text": "very high brokerage charges I lost too much amount through brokerage charges",
+        "doc_id": "doc_222",
         "rating": 1
       }
     ],
     "action_ideas": [
       {
         "title": "Review Brokerage Charge Structure",
-        "detail": "Re-evaluate the brokerage charge structure to ensure it is competitive and transparent to users."
+        "detail": "Re-evaluate the brokerage charge structure to ensure it is competitive and transparent, and consider revising it to better align with user expectations."
       },
       {
-        "title": "Improve Communication",
-        "detail": "Enhance communication with users regarding changes in brokerage charges and provide clear information on all applicable fees."
+        "title": "Improve Transparency and Communication",
+        "detail": "Enhance communication with users regarding brokerage charges, including clear disclosure of all fees and charges, to build trust and prevent unexpected surprises."
       }
     ],
-    "review_count": 71,
-    "avg_rating": 1.68
+    "review_count": 70,
+    "avg_rating": 1.59
   },
   {
-    "theme_name": "User Friendly App",
-    "description": "Users praise the app for its clean, beginner-friendly, and smooth interface, making it easy to navigate and use for trading and investing. The app's transparency with charges and portfolio tracking is also appreciated.",
+    "theme_name": "User Friendly",
+    "description": "The Groww app is praised for its clean, beginner-friendly, and smooth interface, making it easy for users to navigate and invest. The app's transparency and customer support are also commended.",
     "quotes": [
       {
         "text": "The interface is clean, beginner-friendly, and very smooth to navigate",
-        "doc_id": "doc_672",
-        "rating": 5
-      },
-      {
-        "text": "groww is very good app for trading and it use very easy",
-        "doc_id": "doc_20",
+        "doc_id": "doc_693",
         "rating": 5
       },
       {
         "text": "The interface is simple, intuitive, and makes it easy for new users to start investing",
-        "doc_id": "doc_965",
+        "doc_id": "doc_986",
+        "rating": 5
+      },
+      {
+        "text": "groww is very good app for trading and it use very easy",
+        "doc_id": "doc_41",
         "rating": 5
       }
     ],
     "action_ideas": [
       {
-        "title": "Enhance User Experience",
-        "detail": "Continuously gather user feedback to identify areas for improvement and implement updates to maintain a smooth and intuitive interface."
+        "title": "Simplify Onboarding Process",
+        "detail": "Streamline the app's onboarding process to make it even easier for new users to start investing."
       },
       {
-        "title": "Simplify Trading Process",
-        "detail": "Streamline the trading process by reducing the number of steps required to open stocks, mutual funds, and other investment options."
+        "title": "Continuously Improve User Experience",
+        "detail": "Regularly gather user feedback and iterate on the app's design and features to maintain a smooth and intuitive user experience."
       }
     ],
-    "review_count": 71,
+    "review_count": 63,
     "avg_rating": 4.79
   }
 ]
